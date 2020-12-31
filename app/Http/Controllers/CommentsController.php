@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class CommentsController extends Controller
 {
+    /**
+     * @return string
+     * Comment posting method
+     * handles request from api and validate and store comment to model
+     */
     public function comment()
     {
 

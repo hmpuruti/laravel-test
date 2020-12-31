@@ -15,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
+/*
+ * Comment posting api
+ * Accents POST request from form
+ * and JSON data
+ */
 
 Route::post('/user/comment', [CommentsController::class, 'comment'])->name('post-comment-api');

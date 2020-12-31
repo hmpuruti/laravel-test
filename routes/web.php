@@ -16,7 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+//Home route
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+/*
+ * User Card route
+ * Accents user id
+ * returns user card view for valid user
+ */
 Route::get('/user/{id}', [UsersController::class, 'show'])->name('user-card');
 
 //Tested using API method

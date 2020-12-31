@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 class UsersController extends Controller
 {
     /**
-     * Display the specified resource.
+     * User card method handler
+     * receives user id from route
+     * returns user card for valid users.
      * @param User $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */

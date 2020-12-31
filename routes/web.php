@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -17,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/user/{id}', [UsersController::class, 'show'])->name('user-card');
+
+//Tested using API method
+//Route::post('/user/comment', [CommentsController::class, 'comment'])->name('post-comment');

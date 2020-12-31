@@ -1,5 +1,7 @@
 @extends('layout.app')
 
+{{--{{dd($user)}}--}}
+
 @section('title', 'User Card ' . $user->name)
 
 @section('content')
@@ -9,7 +11,9 @@
             <header>
                 <span class="avatar"><img src="{{asset('images/users/'.$user->id.'.jpg')}}" alt="avatar"/></span>
                 <h1>{{$user->name}}</h1>
-                <p>{{nl2br($user->comments)}}</p>
+                @foreach($user->comments as $comment)
+                    <p>{{$comment->comment}}</p>
+                @endforeach
             </header>
         </section>
         <footer id="footer">

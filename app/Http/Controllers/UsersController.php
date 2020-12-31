@@ -43,10 +43,15 @@ class UsersController extends Controller
      * @param User $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function show(User $id)
+    public function show($id)
     {
 
-        return view('user.card' )->with(['user' => $id]);
+        $user_data = User::findOrFail($id)->with('comments')->first();
+
+        if ($user_data != null) {
+
+            return view('user.card')->with(['user' => $user_data]);
+        }
     }
 
     /**
